@@ -2,6 +2,7 @@ using DynamicalSystemsBase
 using DelayEmbeddings: Dataset
 using ChaosTools
 using OrdinaryDiffEq
+using LinearAlgebra: norm
 
 inittest_default(D) = (state1, d0) -> state1 .+ d0/sqrt(D)
 
@@ -249,12 +250,4 @@ function bisect_to_edge(pinteg, mapper::AttractorMapper; abstol=1e-9)
         distance = norm(u1-u2)
     end
     [u1, u2]
-end;
-
-function norm(x)
-    sum = 0
-    for i in 1:length(x)
-        sum += x[i]^2
-    end
-    sqrt(sum)
 end;
