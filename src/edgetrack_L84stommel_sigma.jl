@@ -1,5 +1,5 @@
 include("edgetrack.jl")
-include("gottwald_model_noice.jl")
+include("model_definitions.jl")
 
 using Plots
 using Statistics

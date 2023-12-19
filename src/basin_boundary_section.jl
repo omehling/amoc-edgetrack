@@ -1,5 +1,5 @@
 
-include("../edge_tracking/gottwald_model_noice.jl")
+include("model_definitions.jl")
 
 using DynamicalSystemsBase
 using DelayEmbeddings: Dataset
