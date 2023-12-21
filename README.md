@@ -2,7 +2,9 @@ This repository provides Julia source code for the paper
 
 O. Mehling, R. Börner, V. Lucarini (2023): **Limits to predictability of the asymptotic state of the Atlantic Meridional Overturning Circulation in a conceptual climate model** [arXiv:2308.16251](http://arxiv.org/abs/2308.16251)
 
----
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10370900.svg)](https://doi.org/10.5281/zenodo.10370900)
+
+## Overview
 
 The coupled conceptual Stommel–L84 model as proposed by Gottwald ([2021](https://doi.org/10.1007/s00382-020-05476-z)) is implemented in `model_definitions.jl`.
 
@@ -13,7 +15,27 @@ The other files provide methods and scripts to reproduce different results from 
 * `transient_lifetime_*.jl` calculate the lifetimes of long transients outside of the bistable regime
 * `basin_boundary_section.jl` samples different phase space sections through the fractal basin boundary to compute its box-counting dimension
 
-All scripts build on the [`DynamicalSystems.jl`](https://github.com/JuliaDynamics/DynamicalSystems.jl) library **version 2.3**.
+## Installation
 
-**NB:** The edge tracking algorithm given in `edgetrack.jl` is superseded by a new implementation of the `edgetracking` method to be released as part of DynamicalSystems.jl: https://github.com/reykboerner/Attractors.jl/blob/85fb37068bd31cc97d4091e6452edb7c4c255af9/src/boundaries/edgetracking.jl <br />
-It is strongly recommended that new code uses this implementation instead of the one provided here.
+Code was written for and run with **Julia 1.8.1** using [`DynamicalSystems.jl`](https://github.com/JuliaDynamics/DynamicalSystems.jl) version 2.3. It may not work with other versions, and specifically it is not compatible with DynamicalSystems 3.X.
+
+For reproducibility, we provide the files `Project.toml` and `Manifest.toml` to replicate the Julia environment via `Pkg.instantiate`, and recommend [`juliaup`](https://github.com/JuliaLang/juliaup) to set the Julia version of the working directory:
+
+```
+$ git clone https://github.com/omehling/amoc-edgetrack.git
+$ cd amoc-edgetrack
+
+$ juliaup add 1.8.1            # Install Julia version 1.8.1 if not available already
+$ juliaup override set 1.8.1   # Set Julia version for this directory
+
+$ julia
+julia> ]
+pkg> activate .
+pkg> instantiate
+```
+
+## Notes
+
+The edge tracking algorithm given in `edgetrack.jl` is superseded by a new implementation of the [`edgetracking`](https://github.com/reykboerner/Attractors.jl/blob/85fb37068bd31cc97d4091e6452edb7c4c255af9/src/boundaries/edgetracking.jl) method to be released as part of DynamicalSystems.jl.
+
+It is **strongly recommended** that new code uses this implementation instead of the one provided here.
