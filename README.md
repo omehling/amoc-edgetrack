@@ -1,6 +1,6 @@
 This repository provides Julia source code for the paper
 
-O. Mehling, R. Börner, V. Lucarini (2023): **Limits to predictability of the asymptotic state of the Atlantic Meridional Overturning Circulation in a conceptual climate model** [arXiv:2308.16251](http://arxiv.org/abs/2308.16251)
+O. Mehling, R. Börner, V. Lucarini (2024): **Limits to predictability of the asymptotic state of the Atlantic Meridional Overturning Circulation in a conceptual climate model.** *Physica D: Nonlinear Phenomena* 459, 134043, https://doi.org/10.1016/j.physd.2023.134043
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10370900.svg)](https://doi.org/10.5281/zenodo.10370900)
 
