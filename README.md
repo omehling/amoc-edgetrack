@@ -36,6 +36,6 @@ pkg> instantiate
 
 ## Notes
 
-The edge tracking algorithm given in `edgetrack.jl` is superseded by a new implementation of the [`edgetracking`](https://github.com/reykboerner/Attractors.jl/blob/85fb37068bd31cc97d4091e6452edb7c4c255af9/src/boundaries/edgetracking.jl) method to be released as part of DynamicalSystems.jl.
+The edge tracking algorithm given in `edgetrack.jl` is superseded by the [`edgetracking`](https://juliadynamics.github.io/DynamicalSystemsDocs.jl/attractors/stable/basins/#Attractors.edgetracking) method of [`Attractors.jl`](https://github.com/JuliaDynamics/Attractors.jl).
 
-It is **strongly recommended** that new code uses this implementation instead of the one provided here.
+It is **strongly recommended** that new code uses this new implementation instead of the one provided here.
